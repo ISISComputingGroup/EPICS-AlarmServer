@@ -1,0 +1,1 @@
+start AlarmServer.exe -root test4 -pluginCustomization alarm_server_settings.ini
