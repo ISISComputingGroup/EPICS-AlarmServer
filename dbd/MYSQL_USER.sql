@@ -30,10 +30,10 @@ GRANT SELECT ON ALARM.* TO report@localhost;
 GRANT SELECT ON ALARM.* TO report@'%';
 FLUSH PRIVILEGES;
 
--- Example for other user who can fully access the config tables remotely
-GRANT ALL ON ALARM.* TO username2@localhost IDENTIFIED BY 'password';
-GRANT INSERT, SELECT, UPDATE, DELETE ON alarm.* TO username2@'%' IDENTIFIED BY 'password';
-FLUSH PRIVILEGES;
+#-- Example for other user who can fully access the config tables remotely
+#GRANT ALL ON ALARM.* TO username2@localhost IDENTIFIED BY 'password';
+#GRANT INSERT, SELECT, UPDATE, DELETE ON alarm.* TO username2@'%' IDENTIFIED BY 'password';
+#FLUSH PRIVILEGES;
 
 -- Check
 USE mysql;
