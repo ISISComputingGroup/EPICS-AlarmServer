@@ -16,14 +16,10 @@ IF NOT exist %ALARMLOGROOT%NUL (
 	echo %ALARMLOGROOT% created 
 )
 
-REM get root configuration name from ini file
-set CONFIG_NAME=
-for /F %%i in ( %MYDIRALARM%config_name.ini ) DO set CONFIG_NAME=%%i
-
 cd %MYDIRALARM%
 
-set ALARMCMD=AlarmServer.exe -root %CONFIG_NAME% -pluginCustomization alarm_server_settings.ini
-set CONSOLEPORT=90010
+set ALARMCMD=%MYDIRALARM%run_alarm_server.bat
+set CONSOLEPORT=9008
 
 @echo Starting Alarm Server (Root Configuration: %CONFIG_NAME%)
 @echo * Note: Root Configuration can be set in file: 'config_name.ini'
