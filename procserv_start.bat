@@ -6,13 +6,13 @@ set WORKINGDIR=%cd%
 
 REM Set Logging file
 IF "%ICPVARDIR%"=="" (
-	set ICPVARDIR=C:\Instrument\Var
+	set ICPVARDIR=C:/Instrument/Var
 )
-set ALARMLOGROOT=%ICPVARDIR%\logs\alarm\
-set LOG_FILE=%ALARMLOGROOT%\alarm-%%Y%%m%%d.log
+set ALARMLOGROOT=%ICPVARDIR%/logs/alarm
+set LOG_FILE=%ALARMLOGROOT%/alarm-%%Y%%m%%d.log
 
-IF NOT exist %ALARMLOGROOT%NUL ( 
-	mkdir %ALARMLOGROOT%
+IF NOT exist "%ALARMLOGROOT%" ( 
+	mkdir "%ALARMLOGROOT%"
 	echo %ALARMLOGROOT% created 
 )
 
