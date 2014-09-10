@@ -1,0 +1,12 @@
+The Alarm server needs a running instance of MySQl - see CSS/ArchiveEngine/setup_mysql_database.txt to install MySQl if
+it is not already done this
+
+Once mysql is started, you need to load ALARM_MYSQL.sql and MYSQL_USER.sql from the dbd directory
+
+from a command prompt run:
+
+    mysql -u root -p < ALARM_MYSQL.sql
+    mysql -u root -p < MYSQL_USER.sql
+
+and when prompted for a password give the MySQl admin password you previous set
+
