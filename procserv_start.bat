@@ -4,7 +4,7 @@ set CYGWIN=nodosfilewarning
 set MYDIRALARM=%~dp0
 set WORKINGDIR=%cd%
 
-call %MYDIRIOCLOG%..\..\config_env_base.bat
+call %MYDIRALARM%..\..\..\config_env_base.bat
 
 REM Set Logging file
 IF "%ICPVARDIR%"=="" (
@@ -28,6 +28,6 @@ set CONSOLEPORT=9008
 @echo Starting Alarm Server (Root Configuration: %CONFIG_NAME%)
 @echo * log file - %LOG_FILE%
 @echo * Note: Root Configuration can be set in file: 'config_name.ini'
-%MYDIRALARM%..\..\tools\cygwin_bin\procServ.exe --logstamp --logfile="%LOG_FILE%" --timefmt="%%c" --restrict --ignore="^D^C" --name=ALARM --pidfile="/cygdrive/c/windows/temp/EPICS_ALARM.pid" %CONSOLEPORT% %ALARMCMD%
+%ICPTOOLS%\cygwin_bin\procServ.exe --logstamp --logfile="%LOG_FILE%" --timefmt="%%c" --restrict --ignore="^D^C" --name=ALARM --pidfile="/cygdrive/c/windows/temp/EPICS_ALARM.pid" %CONSOLEPORT% %ALARMCMD%
 
 cd %WORKINGDIR%

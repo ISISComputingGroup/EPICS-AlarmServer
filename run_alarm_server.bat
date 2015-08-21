@@ -2,7 +2,7 @@
 
 set MYDIRALARM=%~dp0
 
-call %MYDIRALARM%..\..\config_env_base.bat
+call %MYDIRALARM%..\..\..\config_env_base.bat
 
 %HIDEWINDOW% h
 
