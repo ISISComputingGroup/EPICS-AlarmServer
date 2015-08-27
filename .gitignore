@@ -8,7 +8,9 @@ O.*/
 envPaths
 cdCommands
 dllPath.bat
-runIoc.bat
+runIOC.bat
+runIOC.sh
+relPaths.sh
 /configuration/org.eclipse.core.runtime/
 /configuration/org.eclipse.equinox.app/
 /configuration/org.eclipse.osgi/
